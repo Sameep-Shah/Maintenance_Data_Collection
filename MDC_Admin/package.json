@@ -1,0 +1,30 @@
+{
+  "name": "mdc",
+  "version": "1.0.0",
+  "description": "IDM's Maintenance Data Collection Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Urmila JN",
+  "license": "ISC",
+  "dependencies": {
+    "angular-messages": "1.6.10",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "md5": "^2.2.1",
+    "min-angular": "^1.2.0",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}

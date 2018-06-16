@@ -1,0 +1,80 @@
+
+
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+    {{/each}}
+{{/if}}
+
+<div class="header clearfix">
+<nav>
+  <ul class="nav nav-pills pull-right">
+    <form method="get" action="/customer/manageUsers">
+      <button type="submit" class="btn btn-default" formaction="/customer/manageForms">Manage Forms</button>
+      <button type="submit" class="btn btn-default" formaction="/customer/manageUsers">Manage Users</button>
+    </form>
+  </ul>
+</nav>
+<h4>{{customerName}}</h4>
+</div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Form Actions</h3>
+        </div>
+        <div class="panel-body" style="height:120px;overflow:auto;">
+<form method="get" action="/customer/addForm">
+
+  <button type="submit" class="btn btn-default" formaction="/customer/addForm">Add Forms</button>
+  
+</form>
+
+<p></p>
+
+<form method="get" action="/form">
+  <div class="btn-group">
+   <button type="submit" class="btn btn-default" formaction="/customer/getForms">View All Forms</button>
+   </div>
+</form>
+</div>
+</div>
+</div>
+
+
+
+<p></p>
+{{#if forms}}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">View Forms</h3>
+        </div>
+        <div class="panel-body" style="height:300px;overflow:auto;">
+
+       <div class ="btn-group">
+     {{#each forms}} 
+     <div>
+     </br>
+    <a data-toggle="collapse" data-parent="#accordion" href="#demo_{{formName}}">{{formName}}</a>
+    <div id="demo_{{formName}}" class="panel-collapse collapse">
+    <div class="panel-body">
+                  {{#each fields}}  
+                    <ul>
+                     <li>{{name}} - {{type}}</li>
+                    </ul>
+                  {{/each}}   
+            </div>
+      </div>
+  </div>
+{{/each}} 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{{/if}}
+
